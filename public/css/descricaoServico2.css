@@ -1,0 +1,92 @@
+.descricao{
+    
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-top: 2%;
+    font-size: 20px;
+    color: black;
+    
+}
+   
+.imagemDescricao{
+    width: 500px;
+    height: 500px;
+    margin-right: 50%;
+    margin: 0 20%;
+    align-items: center;
+    
+}
+
+.nav-contratar{
+    box-sizing: border-box;
+    display: flex;/*para os card ficarem lado a lado*/
+    justify-content: center;
+    margin-top: 30px;
+    padding: 0px;
+    
+}
+
+.contratar{
+    text-transform: uppercase;
+    background-color: #00335e;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 1%;
+}
+
+.pagamento{
+    display: flex;/*para os card ficarem lado a lado*/
+    justify-content: center;
+    padding: 0px;
+    font-size: 20px;
+}
+.valores {
+    
+    margin: 0 5%;
+    color: #00335e;
+    padding-bottom: 30px;
+    
+}
+@media(max-width: 1024px){
+    .imagemDescricao {
+        position: absolute;
+        margin: 0 5%;
+        width: 400px;
+          
+    }
+   footer{
+       width: 50%;
+   }
+   .contratar{
+        padding: 5px 10px;
+        margin: 0 1.5%;
+        margin-top: 0;
+        
+    }
+    .descricao{
+        width: 55%;
+    }
+    .navbar{
+        width: 55%;
+    }
+    header{
+        width: 50%;
+        margin-bottom: 0;
+    }
+  }
+
+  @media(max-width: 375px){
+    .imagemDescricao {
+        position: absolute;
+        margin: 0 5%;
+        width: 200px;
+    }
+    .contratar{
+        align-items: center;
+        float: none;
+ 
+    }
+}
