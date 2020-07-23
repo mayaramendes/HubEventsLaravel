@@ -9,6 +9,7 @@
   crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="{{ asset ('css/estilo.css')}}">
+  <link rel="stylesheet" href="{{ asset ('css/descricaoServico2.css')}}">
   <link rel="shortcut icon" href="{{ asset('img/logo-white.jpeg') }}">
   
   <title>HubEvents</title>
@@ -58,20 +59,63 @@
             Ver Mais
         </button>  </a>
     </nav>
-
-    <nav class="nav-cards">
-        <img class="cards" src="./img/churrasco.jpg" alt="">
-        <p class="texto_servico">Churrasqueiro Sr João</p>
-           <a href="{{ route('descricaoServico') }}"><button type="button"  class="verMais btn btn-outline-secondary btn-sm" data-toggle="collapse" data-target="#demo">
-              Ver Mais
-          </button>  </a>
-    </nav>
    
     <nav class="nav-cards">
-        <img class="cards" src="./img/festa.jpg" alt="">
-        <p class="texto_servico">Serviço 3</p>
-        <button class="verMais">Ver Mais</button>
+        <img class="cards" src="./img/churrascosrjoao.jpg" alt="">
+        <p class="texto_servico">Churrasco do Sr João</p>
+        <button  type="button" class="verMais btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#ExemploModalCentralizado">Ver Mais</button>
     </nav>
+    
+<div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Churrasco do Sr João</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <section>
+             <div class="descricao">  <!-- uma DIV para cada parte-->
+            <p>
+                Descrição: Churrasco para eventos a partir de 50 pessoas, entre em contato e veja os horarios disponíveis.
+                
+            </p>
+            <br>
+            <img class="imagemDescricao" src="./img/churrascosrjoao.jpg" alt="churrasco">
+            <br>
+        </div> 
+
+        <div> <!-- uma DIV para cada parte-->
+            <nav class="nav-contratar">
+                <button type="button" class="btn btn-secondary btn-sm contratar">Contratar Serviço</button>
+                <button type="button" class="btn btn-secondary btn-sm contratar">Enviar Mensagem</button>
+                <button type="button" class="btn btn-secondary btn-sm contratar">Tenho Interesse</button>
+            </nav>
+        </div> 
+        
+        <div> <!-- uma DIV para cada parte-->
+            <br>
+            <nav class="pagamento">
+                <div class="valores">
+                    R$ {valor}                   
+                </div> 
+                <div class="valores">
+                    Forma de pagamento: {pagamento}                   
+                </div> 
+            </nav>
+        </div>
+        </section>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary btn-sm">Salvar mudanças</button>
+      </div>
+    </div>
+  </div>
+</div>
     
     <nav class="nav-cards">
         <img class="cards" src="./img/churrasco.jpg" alt="">
