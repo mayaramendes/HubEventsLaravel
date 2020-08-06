@@ -34,7 +34,7 @@
       </div>
     </form>
 
-    <a href="{{ route('cadastro') }}" class="cadastro" data-toggle="modal" data-target="#ModalCadastrar">Ainda não tem cadastro ?
+    <a href="{{ url('cadastro') }}" class="cadastro">Ainda não tem cadastro ?
       <span>Cadastre-se agora</span></a>
   </div>
 
