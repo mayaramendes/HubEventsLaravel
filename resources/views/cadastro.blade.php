@@ -20,7 +20,7 @@
         <div class="col-md-6 box">
             <div class="col-md-12 col-12">
                 <div class="form-group">
-                    <form action="Cadastro.html" method="POST"></form>
+                    <form action="Cadastro.html" method="POST">
                     <label for="nomeCompleto">Nome Completo</label>
                     <input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control input-laranja">
                 </div>
@@ -113,8 +113,8 @@
                             </div> -->
                     </div>
                     <div class="modal-footer text-center" style="display: block; border: none;">
-                        <button class="button-finalizar" type="button" class="btn btn-primary">Finalizar</button>
-                    </div>
+                        <button class="button-finalizar" type="submit" class="btn btn-primary">Finalizar</button>
+                    </div></form>
                 </div>
             </div>
         </div>

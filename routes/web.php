@@ -23,3 +23,7 @@ Route::get('/home', 'SiteController@homeCadastrarServicos')->name('home');
 Route::get('/servicosCadastrados', 'SiteController@servicosCadastrados')->name('servicosCadastrados');
 Route::get('/logout', 'SiteController@logout')->name('logout');
 Route::get('/cadastro', 'SiteController@cadastro')->name('cadastro');
+
+Route::post('/servicos', 'CadastroServicoController@store');
+Route::post('/servicos', 'FornecedorController@store');
+Route::get('/teste', 'ServicoSolicitadoController@servicos');

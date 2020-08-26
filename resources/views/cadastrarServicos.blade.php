@@ -75,12 +75,13 @@
 
         </div>
         <div class="modal-body">
-            <form>
+            <form action="/servicos" method="POST">
+            @csrf
                 <div class="form-group">
                     <label class="services" for="service">Serviços *</label><br>
                     <select name="service" id="service">
                         <option disabled selected>Escolha uma opção</option>
-                        <option value="saab">Copeiro(a)</option>
+                        <option value="copeiro">Copeiro(a)</option>
                         <option value="saab">Cozinheiro(a)</option>
                         <option value="saab">Churrasqueiro</option>
                         <option value="saab">Decoração - Festa de casamento</option>
@@ -92,22 +93,23 @@
                         <option value="audi">salgados</option>
                     </select>
                 </div>
+<!-- id e name com o mesmo atributo e o for -->
 
                 <div class="form-group">
-                    <label for="message-value" class="col-form-label value">Valor *</label>
-                    <input class="form-control" placeholder="R$ 00,00" id="message-value"></input>
+                    <label for="valor" class="col-form-label value">Valor *</label>
+                    <input class="form-control" placeholder="R$ 00,00" name="valor" id="valor">
                 </div>
 
                 <div class="form-group">
-                    <label class="service-description" for="recipient-name" class="col-form-label">Descrição do
+                    <label class="service-description" for="descricao" class="col-form-label">Descrição do
                         serviço</label><br>
-                    <textarea id="recipient-name" placeholder="Escreva..." rows="2" cols="49"></textarea>
+                    <textarea name="descricao" id="descricao" placeholder="Escreva..." rows="2" cols="49"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="message-pag" class="col-form-label pag">Formas de pagamento *</label><br>
-                    <textarea id="message-pag" placeholder="Escreva..." rows="2" cols="49"></textarea>
+                    <label for="pagamento" class="col-form-label pag">Formas de pagamento *</label><br>
+                    <textarea name="pagamento" id="pagamento" placeholder="Escreva..." rows="2" cols="49"></textarea>
                 </div>
-            </form>
+            
 
             <div class="form-group upload-photos">
                 <div class='upload-photos-style'>
@@ -129,9 +131,9 @@
         </div>
 
         <div class="modal-footer">
-            <button type="button" class="btn">Salvar</button>
+            <button type="submit" class="btn">Salvar</button>
         </div>
-
+        </form>
     </div>
 
     <!--  <footer class="site-footer push">This is a footer</footer> -->
