@@ -17,7 +17,7 @@ class CreateCadastroServicosTable extends Migration
             $table->id();
             
             //Definindo uma foreignKey
-            $table->foreignId('fornecedor_id')->constrained('fornecedores');
+            $table->foreignId('fornecedor_id')->constrained('fornecedors');
             
             $table->string('nome',100);
             $table->decimal('valor', 7,2); // valores com até 7 casas, sendo que 2 é depois da virgula (10000,00)

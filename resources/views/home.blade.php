@@ -23,13 +23,15 @@
 </head>
 
 <body>
+
     <div>
         <nav style="background-color: #0e0e0e;" class=" push">
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo"></a>
                 <ul id="nav-mobile " class="right hide-on-med-and-down nav-sub">
                     <li> <button class="menu-btn">&#9776; </button></li>
-                    <li> <button class="button-exit"><a href="{{ route('login') }}">Sair</a></button></li>
+                    <li> <button class="button-exit" type="submit"><a href="{{ route('logout') }}">Sair</a></button></li>
+                 
                 </ul>
             </div>
         </nav>

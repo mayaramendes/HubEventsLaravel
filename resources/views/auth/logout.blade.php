@@ -25,7 +25,7 @@
       <p>Caso queira acessar a sua conta novamente, recomendamos que clique no botão abaixo</p>
 
 
-      <button class="btn " type="submit"><a href="{{ route('login') }}">Fazer login</a></button>
+      <button class="btn "><a href="{{ route('login') }}">Fazer login</a></button>
     
     </div>
     <script

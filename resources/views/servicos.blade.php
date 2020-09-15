@@ -35,7 +35,7 @@
                     <a class="nav-link" href="{{ route('login') }}">Promover Eventos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}"><button type="button" class="btn btn-outline-secondary btn-sm botaologin">Login</button></a>
+                    <a class="nav-link" href="{{ route('loginCliente') }}"><button type="button" class="btn btn-outline-secondary btn-sm botaologin">Login</button></a>
                 </li>
                 </ul>
             </div>
@@ -78,6 +78,7 @@
                   </p>
                   <br>
                   <img class="imagemDescricao" src="./img/churrascosrjoao.jpg" alt="churrasco">
+                
                   <br>
               </div> 
       
@@ -136,11 +137,11 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <h4>A Hub Events</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Consequatur similique quia tempore magni velit enim?
-                    </p>
+                   <h4>Contatos</h4>
+                        <p> 
+                            (11) 2525-9898  |  (11) 3235-7458 <br>
+                            contato@hubvents.com.br
+                        </p>
                 </div>
             </div>
         </div>

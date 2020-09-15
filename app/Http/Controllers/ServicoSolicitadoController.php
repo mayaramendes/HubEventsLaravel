@@ -8,7 +8,7 @@ use App\CadastroServico;
 class ServicoSolicitadoController extends Controller
 {
     public function servicos( ){
-       $servicos = CadastroServico::paginate(1);
+       $servicos = CadastroServico::paginate(8);
        return view('servicos',compact('servicos'));
 
     }

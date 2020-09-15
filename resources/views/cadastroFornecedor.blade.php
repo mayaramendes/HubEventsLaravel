@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
     crossorigin="anonymous">
+    <script defer href="{{ asset ('js/main.js')}}"></script>
     <link rel="stylesheet" href="{{ asset ('css/cadastro.css')}}">
     <link rel="stylesheet" href="{{ asset ('css/estilo.css')}}">
     <link rel="shortcut icon" href="{{ asset('img/logo-white.jpeg') }}">
@@ -44,7 +45,7 @@
             <h5 class="cadastrarUsuario">Faça seu cadastro</h5>
         </div>
         <main role="main" class="container">
-            <form action="/cadastro" class="form-row" method="POST" enctype="multipart/form-data">
+            <form action="/cadastroFornecedor" class="form-row" method="POST" enctype="multipart/form-data">
                 <div class="form-group col-md-5 offset-md-1">
                     <label class="services col-form-label value" for="nome">Nome Completo *</label><br>
                     <input type="text"  name="nome" id="nome" class="form-control" placeholder="Nome Completo" required></input>  
@@ -67,22 +68,24 @@
 
                  <div class="form-group col-md-10 offset-md-1">
                     <label for="endereco" class="services col-form-label value">Endereço</label>
-                    <input type="text"  name="endereco" id="endereco" class="form-control" placeholder="Rua das Graças, nº 900"></input>
+                    <input type="text"  name="endereco" id="ruainput" class="form-control" placeholder="Rua das Graças, nº 900" readonly></input>
                 </div>
 
-                <div class="form-group col-md-4 offset-md-1">
+                <div class="form-group col-md-2 offset-md-1">
+                    <label for="cep" class="services col-form-label value">CEP: </label>
+                    <input type="text"  name="cep" id="cepinput" class="form-control"  maxlength="9"></input>
+                </div>
+
+                <div class="form-group col-md-4 ">
                     <label for="cidade" class="services col-form-label value">Cidade </label>
-                    <input type="text"  name="cidade" id="cidade" class="form-control"></input>
+                    <input type="text"  name="cidade " id="cidadeinput" class="form-control"  readonly></input>
                 </div>
                  <div class="form-group col-md-4">
                     <label for="estado" class="services col-form-label value">Estado </label>
-                    <input type="text"  name="estado" id="estado" class="form-control"></input>
+                    <input type="text"  name="estado" id="UFinput" class="form-control" readonly></input>
                 </div>
 
-                 <div class="form-group col-md-2">
-                    <label for="cep" class="services col-form-label value">CEP: </label>
-                    <input type="text"  name="cep" id="cep" class="form-control"></input>
-                </div>
+              
                 
                  <div class="form-group col-md-5 offset-md-1">
                     <label for="senha" class="services col-form-label value">Senha </label>
@@ -116,10 +119,10 @@
                 </div>
                 <div class="col-md-4">
                     <h4>Contatos</h4>
-                    <p> 
-                        (11) 2525-9898  |  (11) 3235-7458 <br>
-                        contato@hubvents.com.br
-                    </p>
+                        <p> 
+                            (11) 2525-9898  |  (11) 3235-7458 <br>
+                            contato@hubvents.com.br
+                        </p>
                 </div>
             </div>
         </div>
@@ -140,6 +143,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
        
 </body>
 </html>

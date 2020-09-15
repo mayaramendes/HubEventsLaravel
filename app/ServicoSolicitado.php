@@ -22,7 +22,7 @@ class ServicoSolicitado extends Model
     // Relacionamento N:N da tabela  servico_solicitados com a tabela cadastro_servico
     public function cadastro_servicos()
     {
-        return $this->belongsToMany(CadastroServico::tag);
+        return $this->belongsToMany(CadastroServico::class);
     }
 }
 

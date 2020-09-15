@@ -17,20 +17,33 @@
 <body>
   <div class="content">
     <a  href="{{ route('index') }}"> <img src="img/logo-white.jpeg" alt="logo" /> </a>
-    <form>
+    <form method="POST" action="{{ route('login') }}"  enctype="multipart/form-data">
+    @csrf
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="text" name="email" id="email" class="form-control" />
+        <input type="text" name="email" id="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" autofocus />
+
+         @error('email')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+          @enderror
+      
       </div>
       <div class="form-group">
         <label for="email">Senha</label>
-        <input type="password" name="senha" id="senha" class="form-control" />
+        <input type="password" name="password" id="password" class="form-control @error('password') is-invalid @enderror" required autocomplete="current-password" />
+
+          @error('password')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+      
       </div>
       <a href="#"  data-toggle="modal" data-target="#ModalRS">Esqueci minha senha</a></br>
       <div class="button">
-        <button class="btn btn-primary">Entrar</button>
-        <p>ou</p>
-        <button class="btn btn-primary">Entrar com o Facebook</button>
+        <button type="submit" class="btn btn-primary">Entrar</button>
       </div>
     </form>
 

@@ -28,7 +28,7 @@
                     <a class="nav-link" href="{{ route('servicos') }}">Eventos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">Promover Eventos</a>
+                    <a class="nav-link" href="{{ route('loginFornecedor') }}">Promover Eventos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}"><button type="button" class="btn btn-outline-secondary btn-sm botaologin">Login</button></a>

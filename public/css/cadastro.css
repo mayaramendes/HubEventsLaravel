@@ -1,164 +1,41 @@
-@import url('https://fonts.googleapis.com/css?family=Muli:400,700&display=swap');
-    body {
-        color: #00335e;
-        font-size: 170%;
-    }
+.cadastrarUsuario{
+    margin-top: 10px;
+    margin-left: 40%; 
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #00335E;
+    padding: 10px 40px;
+    padding-top: 30px;
+}
+.services,
+.service-description,
+.value,
+.pag {
+    font-size: 1em;
+    font-weight: bold;
+    color: #00335E;
+}
+
+#message-value{
+    width: 70%;
+    border-color: #a9a9a9;
+}
+
+/* Container */
+#container {
+    position: relative;
+    padding: 10px 40px;
+    padding-top: 30px;
     
-    .direita {
-        background-color: black;
-        height: 100vh;
-    }
+  }
+
+  #message-pag{
+    border-radius: 5px;
+}
+
+.form-group{
     
-    .box {
-        padding: 40px 30px 40px 30px;
-    }
-    
-    .input-laranja {
-        border-radius: 25px;
-        border-color: #fa8529;
-    }
-    
-    .modal-body {
-        text-align: center;
-        color: #00335e;
-        font-size: 100%;
-        font-family: "Roboto";
-    }
-    
-    .button-finalizar {
-        color: white;
-        background-color: #fa8529;
-        border-radius: 5px;
-        border-style: solid;
-        border-color: #fa8529;
-        text-align: center;
-    }
-    
-    .button-proximo {
-        color: #fa8529;
-        background-color: white;
-        width: 20vh;
-        height: 6vh;
-        border-radius: 5px;
-        border-style: solid;
-        border-color: #fa8529;
-        text-align: center;
-        font-size: 100%;
-        font-family: "Roboto";
-    }
-    
-    .button-cancelar {
-        color: #00335e;
-        background-color: white;
-        width: 20vh;
-        height: 6vh;
-        border-radius: 5px;
-        border-style: solid;
-        border-color: #00335e;
-        text-align: center;
-        font-size: 100%;
-        font-family: "Roboto";
-    }
-    
-    @media(max-width: 700px) {
-        .direita {
-            position: relative;
-            height: 30vh;
-        }
-        img {
-            display: none;
-        }
-        .button-proximo {
-            position: absolute;
-            top: 30px;
-            left: 35px;
-        }
-        .button-cancelar {
-            position: absolute;
-            top: 30px;
-            right: 35px;
-        }
-    }
-    
-    @media(max-width: 992px) {
-        .direita {
-            position: relative;
-            height: 30vh;
-        }
-        img {
-            display: none;
-        }
-        .button-proximo {
-            position: absolute;
-            left: 10px;
-            top: 50px;
-        }
-        .button-cancelar {
-            position: absolute;
-            right: 10px;
-            top: 50px;
-        }
-    }
-    
-    @media(min-width: 1366px) {
-        .direita {
-            position: relative;
-        }
-        .button-proximo {
-            position: absolute;
-            left: 95px;
-            bottom: 20px;
-            width: 20vh;
-            height: 6vh
-        }
-        .button-cancelar {
-            position: absolute;
-            right: 95px;
-            bottom: 20px;
-            width: 20vh;
-            height: 6vh;
-        }
-    }
-    
-    @media(max-width: 600px) {
-        .direita {
-            position: relative;
-            height: 20vh;
-        }
-        .button-proximo {
-            position: absolute;
-            left: 20px;
-            bottom: 90px;
-            width: 16vh;
-            height: 6vh
-        }
-        .button-cancelar {
-            position: absolute;
-            right: 20px;
-            bottom: 90px;
-            width: 16vh;
-            height: 6vh;
-        }
-    }
-    
-    @media(min-width: 800px) {
-        .direita {
-            position: relative;
-            height: 50vh;
-            width: 100%;
-        }
-        .button-proximo {
-            position: absolute;
-            left: 20px;
-            bottom: 90px;
-            width: 16vh;
-            height: 6vh;
-        }
-        .button-cancelar {
-            position: absolute;
-            right: 20px;
-            bottom: 90px;
-            width: 16vh;
-            height: 6vh;
-        }
-    }
+    margin-bottom: 5px!important;
+}
+
+

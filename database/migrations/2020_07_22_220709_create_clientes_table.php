@@ -19,12 +19,11 @@ class CreateClientesTable extends Migration
             $table->string('email',50)->unique();
             $table->string('telefoneCelular',15);
             $table->string('telefoneFixo',15);
-            $table->string('cep',9); 
             $table->string('endereco',50);
-            $table->string('enderecoNumero',10);
             $table->string('cidade',20);
             $table->string('estado',20);
-            $table->string('senha',10);
+            $table->string('cep',9); 
+            $table->string('senha');
             $table->timestamps();
         });
     }

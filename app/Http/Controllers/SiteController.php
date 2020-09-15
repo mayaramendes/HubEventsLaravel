@@ -30,6 +30,12 @@ class SiteController extends Controller
         return view('login');
     }
 
+    public function loginCliente()
+    {
+        //Pagina de login do fornecedor
+        return view('loginCliente');
+    }
+
     public function descricaoServico()
     {
     // Pagina de Descrição de Servicos 
@@ -65,4 +71,12 @@ class SiteController extends Controller
      // Página de Cadastro
         return view('cadastro');   
     }
+
+    public function cadastroFornecedor()
+    {
+        // Pagina de Cadastro do Fornecedor
+        return view ('cadastroFornecedor');
+    }
+
+  
 }

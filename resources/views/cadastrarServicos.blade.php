@@ -75,22 +75,22 @@
 
         </div>
         <div class="modal-body">
-            <form action="/servicos" method="POST">
-            @csrf
+            <form action="/servicos" method="POST" enctype="multipart/form-data">
+            
                 <div class="form-group">
                     <label class="services" for="service">Serviços *</label><br>
                     <select name="service" id="service">
                         <option disabled selected>Escolha uma opção</option>
-                        <option value="copeiro">Copeiro(a)</option>
-                        <option value="saab">Cozinheiro(a)</option>
-                        <option value="saab">Churrasqueiro</option>
-                        <option value="saab">Decoração - Festa de casamento</option>
-                        <option value="saab">Decoração - Festas infantis</option>
-                        <option value="saab">Decoração - Festas juvenis</option>
-                        <option value="saab">Doces</option>
-                        <option value="saab">Garçon/Garçonete</option>
-                        <option value="opel">Salão de Festa</option>
-                        <option value="audi">salgados</option>
+                        <option value="Copeiro">Copeiro(a)</option>
+                        <option value="Cozinheiro">Cozinheiro(a)</option>
+                        <option value="Churrasqueiro">Churrasqueiro</option>
+                        <option value="Casamento">Decoração - Festa de casamento</option>
+                        <option value="Festas Infantis ">Decoração - Festas infantis</option>
+                        <option value="Festas Juvenis">Decoração - Festas juvenis</option>
+                        <option value="Doces">Doces</option>
+                        <option value="Garçons">Garçon/Garçonete</option>
+                        <option value="Salão de Festas">Salão de Festa</option>
+                        <option value="Salgados">salgados</option>
                     </select>
                 </div>
 <!-- id e name com o mesmo atributo e o for -->
@@ -119,7 +119,7 @@
                 <div class='upload-photos-style-two'>
                     <img src="img/cloud-computing.svg" alt="icone de upload">
                     <p>Click no botão e selecione uma arquivo de cada vez</p>
-                    <input class="photos-button" type="file" name="foto">
+                    <input class="photos-button" type="file" id ="foto" name="foto">
                 </div>
             </div>
 
@@ -133,6 +133,7 @@
         <div class="modal-footer">
             <button type="submit" class="btn">Salvar</button>
         </div>
+        @csrf
         </form>
     </div>
 

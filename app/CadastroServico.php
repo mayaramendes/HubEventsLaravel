@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Fornecedor;
 
+
 class CadastroServico extends Model
 {
     protected $fillable = [
@@ -20,4 +21,6 @@ class CadastroServico extends Model
     {
         return $this->belongsTo(Fornecedor::class);
     }
+
+
 }
