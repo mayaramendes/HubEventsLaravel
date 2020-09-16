@@ -15,6 +15,7 @@
   <title>HubEvents</title>
 </head>
 <body>
+
     <header class="menu pb-10">
         <nav class="navbar navbar-expand-lg navbar-dark">
              <a class="navbar-brand" href="{{ route('index') }}">
@@ -55,7 +56,7 @@
     
    @foreach ($servicos as $servico)
     <nav class="nav-cards">
-    <img class="cards" src="./img/churrascosrjoao.jpg" alt="">
+    <img class="cards" src="{{url("storage/".$servico->foto)}}" alt="">
     <p class="texto_servico">{{$servico->nome}}</p>
     <button  type="button" class="verMais btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#servico{{$servico->id}}">Ver Mais</button>
     </nav>
@@ -73,11 +74,11 @@
               <section>
                    <div class="descricao">  <!-- uma DIV para cada parte-->
                   <p>
-                      {{$servico->descricao}}
+                      {{$servico->descricao}} 
                       
                   </p>
                   <br>
-                  <img class="imagemDescricao" src="./img/churrascosrjoao.jpg" alt="churrasco">
+                  <img class="imagemDescricao" src="{{url("storage/".$servico->foto)}}" alt="churrasco">
                 
                   <br>
               </div> 
