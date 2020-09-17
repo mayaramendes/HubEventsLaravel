@@ -34,5 +34,5 @@ Route::post('/cadastroFornecedor', 'FornecedorController@cadastrarFornecedor');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
-
+// Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+Route::post('/logout', 'Auth\LoginController@logout');

@@ -8,6 +8,7 @@
   integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
   crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
   <link rel="stylesheet" href="{{ asset ('css/estilo.css')}}">
   <link rel="stylesheet" href="{{ asset ('css/descricaoServico2.css')}}">
   <link rel="shortcut icon" href="{{ asset('img/logo-white.jpeg') }}">
@@ -86,11 +87,44 @@
               <div> <!-- uma DIV para cada parte-->
                   <nav class="nav-contratar">
                       <button type="button" class="btn btn-secondary btn-sm contratar">Contratar Serviço</button>
-                      <button type="button" class="btn btn-secondary btn-sm contratar">Enviar Mensagem</button>
+                  <button type="button" class="btn btn-secondary btn-sm contratar" data-toggle="modal" data-target="#exampleModal{{$servico->id}}" data-whatever="@contato">Enviar Mensagem</button>
                       <button type="button" class="btn btn-secondary btn-sm contratar">Tenho Interesse</button>
                   </nav>
-              </div> 
-              
+
+                    {{-- Modal para enviar mensagem  --}}
+            <div class="modal fade" id="exampleModal{{$servico->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Nova mensagem</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                        {{-- <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Destinatário:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div> --}}
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Mensagem:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary mensagem-sucesso" id="mensagem-sucesso">Enviar</button>
+                    </div>
+                    </div>
+                </div>
+            </div> 
+              </div>   
+
+                     
+          
+
               <div> <!-- uma DIV para cada parte-->
                   <br>
                   <nav class="pagamento">
@@ -102,16 +136,24 @@
                       </div> 
                   </nav>
               </div>
+
               </section>
+
+        
+
+
       
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Fechar</button>
-              <button type="button" class="btn btn-primary btn-sm">Salvar mudanças</button>
+              {{-- <button type="button" class="btn btn-primary btn-sm">Salvar mudanças</button> --}}
             </div>
           </div>
         </div>
       </div>
+
+ 
+
 
    @endforeach
 
@@ -162,6 +204,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
+
+    <script src="js/main.js"></script> 
+    <script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
 
 </body>
 </html>

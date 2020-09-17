@@ -30,7 +30,8 @@ class CadastroServicoController extends Controller
         $cadastroServico->descricao = request('descricao');
         $cadastroServico->forma_de_pagamento = request('pagamento');
         // $cadastroServico->foto = '/img';
-        $cadastroServico->fornecedor_id = '2';
+        $fornecedorId = auth()->user()->id;
+        $cadastroServico->fornecedor_id = $fornecedorId;
 
         $cadastroServico->save();
 

@@ -22,10 +22,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-
+    <link rel="stylesheet" href="{{ asset ('css/estilo.css')}}">
+    <link rel="stylesheet" href="{{ asset ('css/descricaoServico2.css')}}">
 </head>
 
 <body>
+
+    
     <div>
         <nav style="background-color: #0e0e0e;" class=" push">
             <div class="nav-wrapper">
@@ -42,7 +45,7 @@
             <div class="pushy-content">
 
                 <a href="{{ route('index') }}"> <img class="logo-hv" src="img/logo-black.PNG" alt="Logo HubEvents"></a>
-                <ul class="menu">
+                <ul class="menu" style="background-color: #0e0e0e">
 
                     <li class="pushy-submenu">
                         <a href="{{ route('home') }}">Página inicial</a>
@@ -73,41 +76,111 @@
 
 
         <div class="notification">
-
-            <ul class="notification-titles">
-                <li class="notification-title-one registered-service" >
-                    Serviço: Cozinheiro
-                </li>
-                <li class="notification-title-service registered-service">
-                    Valor: A combinar
-                </li>
-            </ul>
-
-            <h1 class="notification-description"> Descrição do serviço:</h1>
-
-            <p class="notification-description-message">A mensagem que ficará aqui, será a que o prestador de serviço
-                vai escrever quando for cadastrar o serviço.
-                exemplo de mensagem:<br>
-               <strong> Ofereço o serviço de cozinheiro para eventos pequenos e grandes. O valor varia, pois tenho que avaliar
-                 as horas de festa, quantidade de convidados e a variedade de pratos. </strong>
-            </p>
+            <section class="opcoes">
+                @foreach ($servicos as $servico)
+                <nav class="nav-cards">
+                <img class="cards" src="{{url("storage/".$servico->foto)}}" alt="">
+                <p class="texto_servico">{{$servico->nome}}</p>
+                <button  type="button" class="verMais btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#servico{{$servico->id}}">Ver Mais</button>
+                </nav>
             
-            <div class="photos-service">
-                <img class="photos-services-tree" src="img/photo-upload.svg" alt="fotos do serviço">
-                <img class="photos-services-tree" src="img/photo-upload.svg" alt="fotos do serviço">
-                <img class="photos-services-tree" src="img/photo-upload.svg" alt="fotos do serviço">
-            </div>
-          
+                <div class="modal fade" id="servico{{$servico->id}}" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title TituloModalCentralizado">{{$servico->nome}}</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <section>
+                               <div class="descricao">  <!-- uma DIV para cada parte-->
+                              <p>
+                                  {{$servico->descricao}} 
+                                  
+                              </p>
+                              <br>
+                              <img class="imagemDescricao" src="{{url("storage/".$servico->foto)}}" alt="churrasco">
+                            
+                              <br>
+                          </div> 
+                  
+                          <div> <!-- uma DIV para cada parte-->
+                              <nav class="nav-contratar">
+                                  <button type="button" class="btn btn-secondary btn-sm contratar">Contratar Serviço</button>
+                                  <button type="button" class="btn btn-secondary btn-sm contratar" data-toggle="modal" data-target="#exampleModal" data-whatever="@contato">Enviar Mensagem</button>
+                                  <button type="button" class="btn btn-secondary btn-sm contratar">Tenho Interesse</button>
+                              </nav>
+            
+                                {{-- Modal para enviar mensagem  --}}
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Nova mensagem</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                    {{-- <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Destinatário:</label>
+                                        <input type="text" class="form-control" id="recipient-name">
+                                    </div> --}}
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Mensagem:</label>
+                                        <textarea class="form-control" id="message-text"></textarea>
+                                    </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary" id="mensagem-sucesso">Enviar</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div> 
+                          </div>   
+            
+                                 
+                      
+            
+                          <div> <!-- uma DIV para cada parte-->
+                              <br>
+                              <nav class="pagamento">
+                                  <div class="valores">
+                                     Valor: R$ {{$servico->valor}}                   
+                                  </div> 
+                                  <div class="valores">
+                                      Formas de pagamento: {{$servico->forma_de_pagamento}}                   
+                                  </div> 
+                              </nav>
+                          </div>
+            
+                          </section>
+            
+                    
+            
+            
+                  
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Fechar</button>
+                          {{-- <button type="button" class="btn btn-primary btn-sm">Salvar mudanças</button> --}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            
+             
+            
+            
+               @endforeach
+                </section>
 
-            <ul class="notification-contact">
-                <li class="notification-contact-one">
-                    <strong>Formas de pagamento:</strong><br>
-                    <span>Cartão de crédito, débito e a vista</span>
-                </li>
-                <li class="notification-contact-two">
-                    <button class="delete">Excluir serviço</button>
-                </li>
-            </ul>
+           
 
         </div>
 

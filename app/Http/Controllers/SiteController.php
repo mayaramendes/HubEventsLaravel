@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\CadastroServico;
 
 class SiteController extends Controller
 {
@@ -56,8 +57,10 @@ class SiteController extends Controller
 
     public function servicosCadastrados()
     {
+        $fornecedorId = auth()->user()->id;
+        $servicos = CadastroServico::where('fornecedor_id',$fornecedorId)->get();
     // Página de Serviços Cadastrados
-        return view('servicosCadastrados');
+        return view('servicosCadastrados',compact('servicos', 'fornecedorId'));
     }
 
     public function logout()

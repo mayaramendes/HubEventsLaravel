@@ -30,7 +30,15 @@
                 <a href="#" class="brand-logo"></a>
                 <ul id="nav-mobile " class="right hide-on-med-and-down nav-sub">
                     <li> <button class="menu-btn">&#9776; </button></li>
-                    <li> <button class="button-exit" type="submit"><a href="{{ route('logout') }}">Sair</a></button></li>
+                    <li> 
+                        <form action="/logout" method="POST">
+                            <button class="button-exit" type="submit">Sair</button>
+                             @csrf
+                        </form>
+                        
+                    
+                    </li>
+
                  
                 </ul>
             </div>
