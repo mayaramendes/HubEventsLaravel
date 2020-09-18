@@ -26,6 +26,6 @@ class ClienteController extends Controller
         
         
         
-        return redirect('/cadastro'); // para retornar o arquivo cadastro.blade.php
+        return redirect('/loginCliente'); // para retornar o arquivo cadastro.blade.php
     }
 }

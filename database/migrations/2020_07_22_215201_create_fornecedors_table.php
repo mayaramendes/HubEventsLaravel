@@ -23,7 +23,7 @@ class CreateFornecedorsTable extends Migration
             $table->string('cidade',20);
             $table->string('estado',20);
             $table->string('cep',9); 
-            $table->string('remember_token', 100);
+            $table->rememberToken();
             $table->string('password');
             $table->timestamps();
         });

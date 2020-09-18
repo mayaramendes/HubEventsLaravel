@@ -12,7 +12,7 @@ class FornecedorController extends Controller
     
         $fornecedor->nome = request('nomeCompleto');
         $fornecedor->email = request('email');
-        $fornecedor->senha = request('senha');
+        $fornecedor->password = request('password');
 
 
         $fornecedor->save();
@@ -33,11 +33,11 @@ class FornecedorController extends Controller
         $cadastrarFornecedor->cidade = request('cidade');
         $cadastrarFornecedor->estado = request('estado');
         $cadastrarFornecedor->cep = request('cep');
-        $cadastrarFornecedor->senha = bcrypt(request('senha')); // senha criptografada 
+        $cadastrarFornecedor->password = bcrypt(request('password')); // senha criptografada 
         $cadastrarFornecedor->save();
         
         
         
-        return redirect('/cadastroFornecedor'); // para retornar o arquivo cadastroFornecedor.blade.php
+        return redirect('/login'); // para retornar o arquivo cadastroFornecedor.blade.php
     }
 }

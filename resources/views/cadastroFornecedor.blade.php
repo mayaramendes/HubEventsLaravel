@@ -67,27 +67,27 @@
 
                  <div class="form-group col-md-10 offset-md-1">
                     <label for="endereco" class="services col-form-label value">Endereço</label>
-                    <input type="text"  name="endereco" id="ruainput" class="form-control" placeholder="Rua das Graças, nº 900" readonly></input>
+                    <input type="text"  name="endereco" id="endereco" class="form-control" placeholder="Rua das Graças, nº 900" readonly></input>
                 </div>
 
                 <div class="form-group col-md-2 offset-md-1">
                     <label for="cep" class="services col-form-label value">CEP: </label>
-                    <input type="text"  name="cep" id="cepinput" class="form-control"  maxlength="9"></input>
+                    <input type="text"  name="cep" id="cep" class="form-control"  maxlength="9"></input>
                 </div>
 
                 <div class="form-group col-md-4 ">
                     <label for="cidade" class="services col-form-label value">Cidade </label>
-                    <input type="text"  name="cidade " id="cidadeinput" class="form-control"  readonly></input>
+                    <input type="text"  name="cidade" id="cidade" class="form-control"  readonly></input>
                 </div>
                  <div class="form-group col-md-4">
                     <label for="estado" class="services col-form-label value">Estado </label>
-                    <input type="text"  name="estado" id="UFinput" class="form-control" readonly></input>
+                    <input type="text"  name="estado" id="estado" class="form-control" readonly></input>
                 </div>
 
               
                 
                  <div class="form-group col-md-5 offset-md-1">
-                    <label for="senha" class="services col-form-label value">Senha </label>
+                    <label for="password" class="services col-form-label value">Senha </label>
                     <input type="password"  name="password" id="password" class="form-control" placeholder="Digite sua senha" required></input>
                 </div>
 

@@ -19,6 +19,7 @@ Route::get('/about', 'SiteController@about')->name('about');
 Route::get('/login', 'SiteController@login');
 
 Route::get('/loginCliente', 'SiteController@loginCliente')->name('loginCliente');
+Route::post('/loginCliente', 'Auth\LoginController@login');
 Route::get('/descricaoServico', 'SiteController@descricaoServico')->name('descricaoServico');
 Route::get('/cadastrarServicos', 'SiteController@cadastrarServicos')->name('cadastrarServicos');
 Route::get('/home', 'SiteController@homeCadastrarServicos')->name('home');

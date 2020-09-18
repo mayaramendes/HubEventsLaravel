@@ -17,14 +17,15 @@
 <body>
   <div class="content">
     <a  href="{{ route('index') }}"> <img src="img/logo-white.jpeg" alt="logo" /> </a>
-    <form>
+    <form method="POST" action="loginCliente">
+      @csrf
       <div class="form-group">
         <label for="email">Email</label>
         <input type="text" name="email" id="email" class="form-control" />
       </div>
       <div class="form-group">
-        <label for="email">Senha</label>
-        <input type="password" name="senha" id="senha" class="form-control" />
+        <label for="password">Senha</label>
+        <input type="password" name="password" id="password" class="form-control" />
       </div>
       <a href="#"  data-toggle="modal" data-target="#ModalRS">Esqueci minha senha</a></br>
       <div class="button">
@@ -51,7 +52,8 @@
         </div>
         <div class="modal-body">
           <form class="modal-form-regis">
-    
+            @csrf
+
             <div class="form-group">
               <label for="email">Email*</label>
               <input type="text" name="email" id="email" placeholder="Digite o endereço de e-mail cadastrado" class="form-control" />
