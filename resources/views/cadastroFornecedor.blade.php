@@ -67,7 +67,7 @@
 
                  <div class="form-group col-md-10 offset-md-1">
                     <label for="endereco" class="services col-form-label value">Endereço</label>
-                    <input type="text"  name="endereco" id="endereco" class="form-control" placeholder="Rua das Graças, nº 900" readonly></input>
+                    <input type="text"  name="endereco" id="endereco" class="form-control" placeholder="Rua das Graças, nº 900" ></input>
                 </div>
 
                 <div class="form-group col-md-2 offset-md-1">
@@ -77,11 +77,11 @@
 
                 <div class="form-group col-md-4 ">
                     <label for="cidade" class="services col-form-label value">Cidade </label>
-                    <input type="text"  name="cidade" id="cidade" class="form-control"  readonly></input>
+                    <input type="text"  name="cidade" id="cidade" class="form-control"  ></input>
                 </div>
                  <div class="form-group col-md-4">
                     <label for="estado" class="services col-form-label value">Estado </label>
-                    <input type="text"  name="estado" id="estado" class="form-control" readonly></input>
+                    <input type="text"  name="estado" id="estado" class="form-control" ></input>
                 </div>
 
               

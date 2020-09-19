@@ -41,7 +41,7 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function login(Request $request){
+   /* public function login(Request $request){
         $this->validator($request);
     
         if(Auth::guard('cliente')->attempt($request->only('email','password'),$request->filled('remember'))){
@@ -78,7 +78,7 @@ class LoginController extends Controller
             ->withInput()
             ->with('error','Por favor, tente novamente!');
     }
-
+*/
     public function logout () {
         //logout user
         Auth::logout();
