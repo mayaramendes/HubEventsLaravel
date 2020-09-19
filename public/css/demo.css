@@ -65,9 +65,9 @@ ul {
 
 
 }
-.button-exit a{
+.button-exit {
 
-  color: #FFFFFF;
+  color: #FFFFFF!important;
   text-decoration: none;
 
 }

@@ -67,21 +67,21 @@
 
                  <div class="form-group col-md-10 offset-md-1">
                     <label for="endereco" class="services col-form-label value">Endereço</label>
-                    <input type="text"  name="endereco" id="endereco" class="form-control" placeholder="Rua das Graças, nº 900" ></input>
+                    <input type="text"  name="endereco" id="enderecoinput" class="form-control" placeholder="Rua das Graças, nº 900" ></input>
                 </div>
 
                 <div class="form-group col-md-2 offset-md-1">
                     <label for="cep" class="services col-form-label value">CEP: </label>
-                    <input type="text"  name="cep" id="cep" class="form-control"  maxlength="9"></input>
+                    <input type="text"  name="cep" id="cepinput" class="form-control"  maxlength="9"></input>
                 </div>
 
                 <div class="form-group col-md-4 ">
                     <label for="cidade" class="services col-form-label value">Cidade </label>
-                    <input type="text"  name="cidade" id="cidade" class="form-control"  ></input>
+                    <input type="text"  name="cidade" id="cidadeinput" class="form-control"  ></input>
                 </div>
                  <div class="form-group col-md-4">
                     <label for="estado" class="services col-form-label value">Estado </label>
-                    <input type="text"  name="estado" id="estado" class="form-control" ></input>
+                    <input type="text"  name="estado" id="estadoinput" class="form-control" ></input>
                 </div>
 
               
@@ -144,7 +144,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     
-     <script defer src="{{ asset ('js/main.js')}}"></script>
+     <script src="{{ asset ('js/buscaCep.js')}}"></script>
        
 </body>
 </html>

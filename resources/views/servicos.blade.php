@@ -86,9 +86,9 @@
       
               <div> <!-- uma DIV para cada parte-->
                   <nav class="nav-contratar">
-                      <button type="button" class="btn btn-secondary btn-sm contratar">Contratar Serviço</button>
+                      {{-- <button type="button" class="btn btn-secondary btn-sm contratar">Contratar Serviço</button> --}}
                   <button type="button" class="btn btn-secondary btn-sm contratar" data-toggle="modal" data-target="#exampleModal{{$servico->id}}" data-whatever="@contato">Enviar Mensagem</button>
-                      <button type="button" class="btn btn-secondary btn-sm contratar">Tenho Interesse</button>
+                      <button type="button" class="btn btn-secondary btn-sm contratar" id="mensagem-button">Tenho Interesse</button>
                   </nav>
 
                     {{-- Modal para enviar mensagem  --}}
@@ -96,7 +96,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Nova mensagem</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Diga o que precisa e informe seu contato</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                         <span aria-hidden="true">&times;</span>
                         </button>
@@ -115,7 +115,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary mensagem-sucesso" id="mensagem-sucesso">Enviar</button>
+                        <button type="button" class="btn btn-primary mensagem-sucesso" id="mensagem-sucesso resetButton">Enviar</button>
                     </div>
                     </div>
                 </div>
@@ -206,6 +206,8 @@
     </script>
 
     <script src="js/main.js"></script> 
+    <script src="js/mainbutton.js"></script>
+    <script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
     <script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
 
 </body>

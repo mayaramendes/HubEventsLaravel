@@ -35,7 +35,7 @@ class CadastroServicoController extends Controller
 
         $cadastroServico->save();
 
-        return redirect('/servicos');
+        return redirect('/servicosCadastrados');
     }
 
     

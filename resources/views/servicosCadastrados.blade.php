@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="{{ asset ('css/pushy.css')}}">
     <link rel="stylesheet" href="{{ asset ('css/modal.css')}}">
-    <link rel="stylesheet" href="{{ asset ('css/tabela.css')}}">
+    {{-- <link rel="stylesheet" href="{{ asset ('css/tabela.css')}}"> --}}
     <link rel="stylesheet" href="{{ asset ('css/servicosCadastrados.css')}}">
     <link rel="shortcut icon" href="{{ asset('img/logo-white.jpeg') }}">
 
@@ -33,9 +33,18 @@
         <nav style="background-color: #0e0e0e;" class=" push">
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo"></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down nav-sub">
+                <ul id="nav-mobile " class="right hide-on-med-and-down nav-sub">
                     <li> <button class="menu-btn">&#9776; </button></li>
-                    <li> <button class="button-exit"><a href="{{ route('login') }}">Sair</a></button></li>
+                    <li> 
+                        <form action="/logout" method="POST">
+                            <button class="button-exit" type="submit">Sair</button>
+                             @csrf
+                        </form>
+                        
+                    
+                    </li>
+
+                 
                 </ul>
             </div>
         </nav>
@@ -45,7 +54,7 @@
             <div class="pushy-content">
 
                 <a href="{{ route('index') }}"> <img class="logo-hv" src="img/logo-black.PNG" alt="Logo HubEvents"></a>
-                <ul class="menu" style="background-color: #0e0e0e">
+                <ul class="menu!" style="background-color: #0e0e0e">
 
                     <li class="pushy-submenu">
                         <a href="{{ route('home') }}">Página inicial</a>
@@ -107,11 +116,11 @@
                           </div> 
                   
                           <div> <!-- uma DIV para cada parte-->
-                              <nav class="nav-contratar">
+                              {{-- <nav class="nav-contratar">
                                   <button type="button" class="btn btn-secondary btn-sm contratar">Contratar Serviço</button>
                                   <button type="button" class="btn btn-secondary btn-sm contratar" data-toggle="modal" data-target="#exampleModal" data-whatever="@contato">Enviar Mensagem</button>
                                   <button type="button" class="btn btn-secondary btn-sm contratar">Tenho Interesse</button>
-                              </nav>
+                              </nav> --}}
             
                                 {{-- Modal para enviar mensagem  --}}
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

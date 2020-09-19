@@ -1,19 +1,3 @@
-// cepinput.oninput = () => {
-  
-//     if(cepinput.value.length != 8){
-//         return;
-//     }
-
-//     fetch(`https://viacep.com.br/ws/${CEPinput.value}/json/`)
-//     .then((resposta) => resposta.json())
-//     .then((dados) => {
-//         ruainput.value = dados.logradouro;
-//         cidadeinput.value = dados.localidade;
-//         UFinput.value = dados.uf;
-//         cepinput.value = dados.cep;
-        
-//     })
-// };
 
 let enviarMensagem = document.getElementsByClassName('mensagem-sucesso')
 for (var i = 0; i<enviarMensagem.length; i++){
@@ -41,8 +25,5 @@ for (var i = 0; i<enviarMensagem.length; i++){
 
 };
 
-// document.getElementById('mensagem-sucesso').onclick = function(){
-//     swal('Boa!', 'Deu tudo certo!', 'success')
-// };
-        
+
     
